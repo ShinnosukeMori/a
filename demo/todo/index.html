@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body">
+    <header class="header">
+    </header>
+
+    <main class="main">
+        <input type="text" id="title">
+        <button id="add">追加</button>
+        <div id="view"></div>
+
+    </main>
+
+    <footer class="footer">
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        const titles = [];
+        // クリックしたら配列に追加
+        $("#add").on("click", function () {
+            //#viewに表示されているものは削除empty
+            $("#view").empty();
+            // #titleのvalueを取得
+            const title = $("#title").val();
+            //配列にvalueを追加（pushを使う）
+            titles.push(title);
+            //#viewに表示する
+            for (let i = 0; i < titles.length; i++) {
+                $("#view").prepend('<div class="delete" data-titles="' + i + '">' + titles[i] + '</div>');
+            }
+            $("#title".val).remove();
+        });
+
+
+        // クリックしたら削除
+        $("div").on("click", ".delete", function () {
+            // #viewの中を空にする
+            $("#view").empty();
+            // 配列から一つ削除する
+            titles.splice($(this).attr("deta-titles"), 1);
+            //配列の数だけデータを表示
+            for (let i = 0; i < titles.length; i++) {
+                $("#view").prepend('<div class="delete" data-titles="' + i + '">' + titles[i] + '</div>');
+            }
+        });
+
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

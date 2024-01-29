@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+
+<body class="body">
+
+    <div class="loader-bg">
+        <div class="loader"></div>
+        <p class="loading--text">Now Loading</p>
+    </div>
+
+    <main class="main">
+        <div class="col">
+            <div class="left">
+
+                <div class="main--video--slick--wap">
+                    <div class="main--video--slick">
+                        <video class="main--video" src="video/16254_1280x720.mp4" loop autoplay muted></video>
+                        <video class="main--video" src="video/16259_1280x720.mp4" loop autoplay muted></video>
+                        <video class="main--video" src="video/38301_1280x720.mp4" loop autoplay muted></video>
+                    </div>
+                    <h1 class="logo">Web Production<br>Mori Shinnosuke</h1>
+                </div>
+
+
+                <div class="pagetop">▲ Top</div>
+
+                <section id="service" class="section--area">
+                    <div class="aaa">
+                        <div class="title--wap">
+                            <h2 class="title">Service</h2>
+                            <p class="title__sub">サービス</p>
+                            <hr>
+                        </div>
+                        <p class="bbb">＊このHPはスクール卒業後の活動を予定して作成しています。<br>
+                            Wordpress作成やECサイト作成など現状では対応出来ないものもあります。
+                        </p>
+                    </div>
+
+                    <p class="service--text">納品後も<span class="slide--marker">保守しやすくSEO内部対策を意識して</span>コーディングします。<br>
+                        コーディング後は複数デバイスでのテストを行い<span class="slide--marker">バグやデザイン崩れなどないかチェックして</span>お渡しています。<br>
+                        制作中もやりとりなど<span class="slide--marker">迅速に対応します。</span><br>
+                        ご提供頂いた情報の<span class="slide--marker">秘密は厳守します。</span>
+                    </p>
+
+                    <div class="service--item--wap">
+                        <figure class="service--item">
+                            <p class="service--item__title">HP作成</p>
+                            <img class="service--item__img" src="img/hom.jpg" alt="">
+
+                            <figcaption class="service--item__text">HTML/CSSを使用し作成します。<br>
+                                簡単なアニメーションを付ける事も出来ます。
+                            </figcaption>
+                            <button class="service--item--button" id="service--item--button--hp">Push!</button>
+                        </figure>
+
+                        <figure class="service--item">
+                            <p class="service--item__title">WordPress作成</p>
+                            <img class="service--item__img" src="img/word.png" alt="">
+                            <figcaption class="service--item__text">WordPlessでは記事の投稿が出来ます。<br>
+                                ご自身でカスタマイズも簡単です。
+                            </figcaption>
+                            <button class="service--item--button" id="service--item--button--wp">Push!</button>
+                        </figure>
+
+                        <figure class="service--item">
+                            <p class="service--item__title">ECサイト作成</p>
+                            <img class="service--item__img" src="img/ec.png" alt="">
+                            <figcaption class="service--item__text">
+                                ECサイトは時間や場所を問いません。<br>ネット上で商品を販売する事が出来るようになります。
+                            </figcaption>
+                            <button class="service--item--button" id="service--item--button--ec">Push!</button>
+                        </figure>
+                    </div>
+
+                    <div class="section--area--text--wap">
+                        <p class="section--area--text" id="service--item--hp">
+                            <span>HP特徴</span><br><br>
+                            【オンラインプレゼンスの構築】<br>
+                            ウェブサイトを持つことで、オンライン上で自分やビジネスの存在感を確立できます。これにより、広く世界中の人々にアクセス可能な形で情報を提供できます。<br><br>
+
+                            【情報発信と共有】<br>
+                            ウェブサイトは、製品やサービスに関する情報を発信し、最新のニュースやアップデートを共有するための中心的な場となります。顧客やファンとのコミュニケーションを強化できます。<br><br>
+
+                            【信頼性向上】<br>
+                            プロフェッショナルで魅力的なウェブサイトは、信頼性を高めます。ビジネスがオンラインでプレゼンスを持っていることは、信頼されるとともに、現代のビジネスにおいては期待されるものです。<br><br>
+
+                            【顧客との対話の促進】<br>
+                            コンタクトフォームやソーシャルメディアへのリンクを組み込むことで、顧客との対話を容易にできます。質問やフィードバックを受け付け、顧客サポートを提供することが可能です。<br><br>
+                        </p>
+
+                        <p class="section--area--text scrolin" id="service--item--wp">
+                            <span>WordPress特徴</span><br><br>
+                            【使いやすさ】<br>
+                            WordPressは非常に使いやすいプラットフォームであり、初心者から経験豊富なユーザーまで、簡単にコンテンツを管理できます。直感的なインターフェースがあります。<br><br>
+
+                            【拡張性】<br>
+                            WordPressには多くのプラグインやテーマが用意されており、これによりウェブサイトの機能やデザインを容易に拡張できます。特定のニーズに合わせてカスタマイズできます。<br><br>
+
+                            【コミュニティとサポート】<br>
+                            WordPressは広範なコミュニティを有しており、オンラインで多くのサポートが得られます。問題が発生した場合、フォーラムやドキュメンテーションで解決策を見つけることができます。<br><br>
+
+                            【SEO対策】<br>
+                            WordPressは標準でSEOに友好的な構造を持っています。また、SEOプラグインを使用してメタ情報の最適化やXMLサイトマップの生成など、SEO対策を強化できます。<br><br>
+                        </p>
+
+                        <p class="section--area--text" id="service--item--ec">
+                            <span>ECサイト特徴</span><br><br>
+                            【グローバルな市場アクセス】<br>
+                            ECサイトを持つことで、地理的な制約を乗り越えて世界中の顧客にアクセスできます。物理店舗に比べて、オンラインでの販売は国境を越えることが容易です。<br><br>
+
+                            【営業時間の拡張】<br>
+                            ECサイトは24時間営業できるため、顧客は自分の都合に合わせていつでも商品を購入できます。これにより営業時間の制約を受けず、売上を伸ばすことが可能です。<br><br>
+
+                            【低コストでの運営】<br>
+                            物理店舗に比べ、ECサイトの運営コストは低い傾向があります。店舗の賃料や従業員の経費などがかからないため、コストを最小限に抑えながら事業を展開できます。<br><br>
+
+                            【ターゲット広告の実現】<br>
+                            ECサイトは顧客データを蓄積しやすく、これを活用してターゲット広告を行うことができます。顧客の嗜好や購買履歴に基づいて、個別にマーケティングを行いやすくなります。<br><br>
+                        </p>
+                    </div>
+                </section>
+
+                <section id="price" class="section--area back">
+                    <div class="title--wap">
+                        <h2 class="title">Price</h2>
+                        <p class="title__sub">価格</p>
+                        <hr>
+                    </div>
+
+                    <p class="category slidein fadein">オリジナルHP</p>
+
+                    <table class="Price--table  slidein fadein">
+                        <tr class="Price--table--row">
+                            <th class="Price--table--heading slidein slide_right_opacity">コーディング（TOPページ）</th>
+                            <td class="Price--table--data slidein slide_left_opacity">￥30.000</td>
+                        </tr>
+
+                        <tr class="Price--table--row">
+                            <th class="Price--table--heading slidein slide_right_opacity">コーディング（下層ページ）</th>
+                            <td class="Price--table--data slidein slide_left_opacity">￥10.000</td>
+                        </tr>
+
+                        <tr class="Price--table--row">
+                            <th class="Price--table--heading slidein slide_right_opacity">コーディング（LP）</th>
+                            <td class="Price--table--data slidein slide_left_opacity">￥40.000</td>
+                        </tr>
+
+                        <tr class="Price--table--row">
+                            <th class="Price--table--heading slidein slide_right_opacity">デザイン＋コーディング</th>
+                            <td class="Price--table--data slidein slide_left_opacity">￥80.000</td>
+                        </tr>
+
+                        <tr class="Price--table--row">
+                            <th class="Price--table--heading slidein slide_right_opacity">コーディング+WordPress化</th>
+                            <td class="Price--table--data slidein slide_left_opacity">￥150.000</td>
+                        </tr>
+
+                        <tr class="Price--table--row">
+                            <th class="Price--table--heading slidein slide_right_opacity">レスポンシブ化</th>
+                            <td class="Price--table--data slidein slide_left_opacity">￥80.000</td>
+                        </tr>
+
+                        <tr class="Price--table--row">
+                            <th class="Price--table--heading slidein slide_right_opacity">流し込み</th>
+                            <td class="Price--table--data slidein slide_left_opacity">￥3.000</td>
+                        </tr>
+                    </table>
+
+                    <p class="category slidein fadein">テンプレートHP</p>
+
+                    <table class="Price--table02 slidein fadein">
+                        <tr class="Price--table--row02">
+                            <th class="Price--table--heading02 slidein slide_right_opacity">コーディング</th>
+                            <td class="Price--table--data02 slidein slide_left_opacity">￥10.000</td>
+                        </tr>
+
+                        <tr class="Price--table--row02">
+                            <th class="Price--table--heading02 slidein slide_right_opacity">レスポンシブ化</th>
+                            <td class="Price--table--data02 slidein slide_left_opacity">￥5.000</td>
+                        </tr>
+
+                        <tr class="Price--table--row02">
+                            <th class="Price--table--heading02 slidein slide_right_opacity">アニメーション追加</th>
+                            <td class="Price--table--data02 slidein slide_left_opacity">￥2.000</td>
+                        </tr>
+
+                        <tr class="Price--table--row02">
+                            <th class="Price--table--heading02 slidein slide_right_opacity">軽微な変更・追加</th>
+                            <td class="Price--table--data02 slidein slide_left_opacity">￥1.000</td>
+                        </tr>
+
+                        <tr class="Price--table--row02">
+                            <th class="Price--table--heading02 slidein slide_right_opacity">画像収集代行</th>
+                            <td class="Price--table--data02 slidein slide_left_opacity">￥3.000</td>
+                        </tr>
+
+                        <tr class="Price--table--row02">
+                            <th class="Price--table--heading02 slidein slide_right_opacity">テキスト作成代行</th>
+                            <td class="Price--table--data02 slidein slide_left_opacity">￥3.000</td>
+                        </tr>
+
+                        <tr class="Price--table--row02">
+                            <th class="Price--table--heading02 slidein slide_right_opacity">WEB公開代行</th>
+                            <td class="Price--table--data02 slidein slide_left_opacity">￥5.000</td>
+                        </tr>
+                    </table>
+
+                    <button id="template--button" class="slidein fadein">テンプレート一覧</button>
+
+                    <div class="template--img--con">
+                        <div class="template--img--wap">
+                            <img class="template--img" src="img/s1.png" alt="">
+                            <a class="template--img--button" target="_blank" href="demo/price1/index.html">デモサイト</a>
+                        </div>
+
+                        <div class="template--img--wap">
+                            <img class="template--img" src="img/s2.png" alt="">
+                            <a class="template--img--button" target="_blank" href="demo/price2/index.html">デモサイト</a>
+                        </div>
+
+                        <div class="template--img--wap">
+                            <img class="template--img" src="img/s3.png" alt="">
+                            <a class="template--img--button" target="_blank" href="demo/price3/index.html">デモサイト</a>
+                        </div>
+
+                        <div class="template--img--wap">
+                            <img class="template--img" src="img/s4.png" alt="">
+                            <a class="template--img--button" target="_blank" href="demo/price4/index.html">デモサイト</a>
+                        </div>
+                    </div>
+
+                    <div class="erase--wap">
+                        <button class="erase">閉じる</button>
+                    </div>
+                </section>
+
+                <section id="request" class="section--area">
+                    <div class="title--wap">
+                        <h2 class="title">Request</h2>
+                        <p class="title__sub">依頼方法</p>
+                        <hr>
+                    </div>
+
+                    <div class="request--wap">
+                        <ul class="request__list slidein fadein">
+                            <li class="request__list__item slidein slide_left">ご依頼内容<br>
+                                <span>(新規サイト作成・リニューアル・メンテナンス・コーディングなど)</span>
+                            </li>
+
+                            <li class="request__list__item slidein slide_left">作成が必要なボリューム<br>
+                                <span>(ページ数など)</span>
+                            </li>
+
+                            <li class="request__list__item slidein slide_left">ご希望の納期や公開日</li>
+                            <li class="request__list__item slidein slide_left">ご予算</li>
+                            <li class="request__list__item slidein slide_left">原稿や素材の準備状況<br>
+                                <span>(ページ内のテキスト原稿・ロゴや写真の画像データ)</span>
+                            </li>
+                            <li class="request__list__item slidein slide_left">ドメイン・サーバーの取得状況</li>
+                            <li class="request__list__item slidein slide_left">制作についてご不安な点や現在お困りの事</li>
+                        </ul>
+
+                        <p class="request__text slidein fadein">上記お伝え頂けるとスムーズにお取引出来ます。<br>
+                            【お問い合わせ】またはSNSよりご連絡下さい。</p>
+                    </div>
+                </section>
+
+                <section id="work" class="section--area back">
+                    <div class="title--wap">
+                        <h2 class="title">Work</h2>
+                        <p class="title__sub">実績</p>
+                        <hr>
+                    </div>
+
+                    <div class="work--con">
+                        <p class="work--text"><span class="slide--marker">このHPも自分でデザインから作成しています。実績の一部としてお考え下さい。</span>
+                        </p>
+
+                        <div class="work--img--wap">
+                            <img class="work--img" src="img/mockup.png" alt="">
+                            <a class="work--img--button" target="_blank" href="demo/work1/index.html">模写コーディング</a>
+                        </div>
+
+                        <hr>
+
+                        <div class="work--app--button--wap">
+                            <div class="work--app--button--inner">
+                                <a class="work--app--button" target="_blank" href="demo/dentaku/index.html">電卓</a>
+                            </div>
+
+                            <div class="work--app--button--inner">
+                                <a class="work--app--button" target="_blank" href="demo/eto/index.html">干支</a>
+                            </div>
+
+                            <div class="work--app--button--inner">
+                                <a class="work--app--button" target="_blank" href="demo/omikuji/index.html">おみくじ</a>
+                            </div>
+
+                            <div class="work--app--button--inner">
+                                <a class="work--app--button" target="_blank" href="demo/tenki/index.html">天気予報</a>
+                            </div>
+
+                            <div class="work--app--button--inner">
+                                <a class="work--app--button" target="_blank" href="demo/todo/index.html">ToDo</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="right">
+
+                <div id="drawer--wap">
+                    <button id="drawer">Menu</button>
+
+                    <nav class="drawer--list--wap">
+                        <ul class="drawer--list">
+                            <li class="drawer--list__item"><a href="#service">Service</a></li>
+                            <li class="drawer--list__item"><a href="#price">Price</a></li>
+                            <li class="drawer--list__item"><a href="#request">Request</a></li>
+                            <li class="drawer--list__item"><a href="#work">Work</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="right--slick">
+                    <div class="self">
+                        <p class="self__text">森真之介<br><br>
+                            2023/11/16～2024/3/16<br>
+                            学舎さくらITエンジニア科<br><br>
+                            高知住み<br><br>
+                            書いてる事以外でも何でもやります！<br>
+                            WEB制作関連じゃなくても大丈夫です！<br>
+                            気軽に連絡ください！
+                        </p>
+                    </div>
+
+                    <div class="study">
+                        <p class="skill">HTML5/CSS3<br>
+                            JavaScript<br>
+                            MySQL<br>
+                            PHP<br>
+                            Git&GitHub<br>
+                            Java<br>
+                            Bootstrap<br>
+                            Figma<br>
+                            BEM<br>
+                            SASS
+                        </p>
+                    </div>
+                </div>
+
+                <div class="self__x">
+                    <img src="img/logo-white.png" alt="" width="30px" height="30px">
+                    <p>エックス</p>
+                </div>
+
+                <div class="self__insta">
+                    <img src="img/Instagram_Glyph_White.png" alt="" width="30px" height="30px">
+                    <p>インスタグラム</p>
+                </div>
+
+
+
+
+                <div id="form--con">
+                    <button id="inquiry">お問い合わせ</button>
+                    <div id="formWrap">
+                        <form method="post" action="mail.php">
+                            <table class="formTable">
+                                <tr>
+                                    <th>お名前</th>
+                                    <td><input size="20" type="text" name="お名前" /> ※必須</td>
+                                </tr>
+                                <tr>
+                                    <th>電話番号（半角）</th>
+                                    <td><input size="30" type="text" name="電話番号" /></td>
+                                </tr>
+                                <tr>
+                                    <th>Mail（半角）</th>
+                                    <td><input size="30" type="text" name="Email" /> ※必須</td>
+                                </tr>
+                                <tr>
+                                    <th>お問い合わせ内容<br /></th>
+                                    <td><textarea name="お問い合わせ内容" cols="50" rows="5"></textarea></td>
+                                </tr>
+                            </table>
+                            <p align="center">
+                                <input type="submit" value="　 確認 　" />　<input type="reset" value="リセット" />
+                            </p>
+                        </form>
+                        </p>
+                    </div>
+
+
+
+
+
+
+                </div>
+    </main>
+    <footer class="footer">
+
+
+
+
+
+
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wap {
+            width: 20%;
+            height: 200px;
+            margin: 0 auto;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            color: white;
+            border: 0;
+            background-color: rgb(255, 0, 0);
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wap">
+        <input onclick="sample()" type="button" value="おみくじを引く">
+    </div>
+
+    <script>
+        var omikuji = ["大吉", "中吉", "中吉", "小吉", "小吉", "凶"];
+
+        function sample() {
+            random = Math.floor(Math.random() * 6);
+            alert(omikuji[random]);
+        }
+    </script>
+</body>
+
+</html>

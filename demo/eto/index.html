@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eto Checker</title>
+    <style>
+        .etoChecker {
+            text-align: center;
+        }
+
+        .etoChecker___inputField {
+            font-size: 24px;
+        }
+
+        .etoChecker___inputField---txt {
+            font-size: 24px;        
+        }
+
+        .etoChecker___inputField---btn {
+            display: block;
+            margin: 20px auto auto auto;
+            width: 250px;
+            height: 50px;
+            border: 0;
+            background: #2299ff;
+            color: white;
+            font-size: 18px;
+        }
+
+        .etoChecker___inputField---btn:hover {
+            opacity: 0.6;
+            transition: 1.0s;
+        }
+
+        .etoChecker___inputField---box {
+            font-size: 28px;
+            text-align: center;
+            margin: auto 10px auto 10px;
+            width: 200px;
+        }
+
+        img {
+            display: block;
+            width: 250px;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="etoChecker">
+        <group class="etoChecker___inputField">
+            <h2>干支チェッカー</h2>
+            <p class="etoChecker___inputField---txt">西暦<input type="number" id="inputBox" class="etoChecker___inputField---box">年</p>
+            <input type="button" value="この年の干支をチェック" onclick="calcEto()" class="etoChecker___inputField---btn"><br>
+            <p id="resultField"></p>
+            <p id="imageField"></p>
+        </group>
+    </section>
+
+    <script>
+        var etoField = ["申", "酉", "戌", "亥", "子", "丑", "寅", "卯", "辰", "巳", "午", "未"];
+        function calcEto() {
+            let calYear = document.getElementById("inputBox").value;
+            if (!(calYear)) {
+                document.getElementById("resultField").innerText = "年数が入力されていません";
+                document.getElementById("imageField").innerText = "";
+            } else if (calYear <= 0) {
+                document.getElementById("resultField").innerText = "年数が正しく入力されていません";
+                document.getElementById("imageField").innerText = "";
+            } else {
+                let etoIndex = calYear % 12;
+                let calEto = etoField[etoIndex];
+                document.getElementById("resultField").innerText = calYear + "年は" + calEto + "年です。";
+                document.getElementById("imageField").innerHTML = "<img src=\"./img/eto" + (etoIndex) + ".png\">";
+            }
+        }
+    </script>
+</body>
+
+</html>

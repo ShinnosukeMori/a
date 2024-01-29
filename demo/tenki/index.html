@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="boot/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="body">
+    <header class="header">
+    </header>
+
+    <main class="main">
+        <div>
+            <h1><span id="area"></span>天気５日間</h1>
+            <div id="view"></div>
+
+        </div>
+
+
+    </main>
+
+    <footer class="footer">
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="boot/bootstrap.bundle.js"></script>
+
+
+
+
+
+    <script>
+
+        // MAP表示処理
+
+        const key = "76c1c8006b16559e811e719904e7be67";
+        const lat = "33.5492935906859";
+        const lon = "133.5040334257159";
+        const icon = "http://openweathermap.org/img/wn";
+
+        // openweatherAPI（天気情報を収得）
+        const url = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&appid=' + key + '&lang=ja';
+        $.ajax({
+            url: url,
+            type: 'get',
+            cache: false,
+            dataType: 'json'
+        }).done(function (data) {
+            let html="";
+            console.log(data);
+            for(let i=0; i<data.list.length; i++){
+            html += `
+            <div>
+                <div>時刻：${data.list[i].dt_txt}</div>
+                <div>風速：${data.list[i].wind.speed}</div>
+                <div>天気：${data.list[i].weather[0].description}</div>
+                <div>降水確率：${data.list[i].pop*100}％</div>
+                <div><img src="${icon+data.list[i].weather[0].icon}@2x.png"></div>
+            </div>
+            `;
+        }
+            $("#view").append(html);
+
+            $("#area").html(data.city.name)
+        });
+
+
+    </script>
+</body>
+
+</html>

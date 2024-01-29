@@ -1,0 +1,107 @@
+<!DOCtype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        form {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        input[type="button"] {
+            width: 65px;
+            height: 65px;
+        }
+
+        input[type="text"] {
+            width: 260px;
+            height: 30px;
+            font-size: 20px;
+            padding: 7px;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+
+<!-- 
+	　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+	 　ここから上は変更しないでください。 
+	 	＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+-->
+
+<body>
+    <form name="calculator">
+        <input type="text" name="screen">
+        <p>
+            <input type="button" value="７">
+            <input type="button" value="８">
+            <input type="button" value="９">
+            <input type="button" value="／">
+        </p>
+        <p>
+            <input type="button" value="４">
+            <input type="button" value="５">
+            <input type="button" value="６">
+            <input type="button" value="＊">
+        </p>
+        <p>
+            <input type="button" value="１">
+            <input type="button" value="２">
+            <input type="button" value="３">
+            <input type="button" value="－">
+        </p>
+        <p>
+            <input type="button" value="０">
+            <input type="button" value="Ｃ">
+            <input type="button" value="＝">
+            <input type="button" value="＋">
+        </p>
+    </form>
+
+    <script>
+        // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+        // ↓↓↓↓↓↓ ここへプログラムを記述してください。↓↓↓↓↓↓
+        // 必要であればbodyタグに追記を行ってください。
+        const calcFormula = document.querySelectorAll("p input");
+
+        function halfConversion(fullWidth) {
+            fullWidth.value = fullWidth.value.replace(/[Ａ-Ｚａ-ｚ０-９＋－＊／]/, function (char) {
+                return String.fromCharCode(char.charCodeAt(0) - 0xFEE0);
+            });
+        }
+        calcFormula.forEach(halfConversion);
+
+        calcFormula[13].addEventListener("click", function () {
+            calculator.screen.value = "";
+        })
+
+        calcFormula[14].addEventListener("click", function () {
+            calculator.screen.value = calculation(calculator.screen.value);
+        })
+
+        for (let i = 0; i < calcFormula.length; i++) {
+            if (i == 13 || i == 14) {
+                continue;
+            }
+            calcFormula[i].addEventListener("click", function () {
+                calculator.screen.value = calculator.screen.value + calcFormula[i].value;
+            })
+        }
+
+        // ↑↑↑↑↑↑ ここへプログラムを記述してください。↑↑↑↑↑↑
+        // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+
+        // 引数に計算式を渡すと計算結果を返す関数
+        // 計算結果を表示されるときはこの関数を使用してください
+        // ※この関数の意味は理解する必要はありません
+        // ※この関数は変更しないでください。
+        function calculation(val) {
+            var res = Function('return (' + val + ');')();
+            return res;
+        }
+    </script>
+</body>
+
+</html>
